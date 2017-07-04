@@ -4,9 +4,10 @@ require_relative ("./library")
 
 class TestLibrary < MiniTest::Test
 
-  def setup
+  def setup()
 
-    @book = { 
+    @book = [
+      { 
       title: "lord_of_the_rings",
       rental_details: { 
        student_name: "Jeff", 
@@ -24,12 +25,12 @@ class TestLibrary < MiniTest::Test
            student_name: "Simon", 
            date: "23/12/16"
          }
-       }
+       ]
 
 
 
   def test_library
-    library = Library.new()
+    @library = Library.new(@books)
 
     assert_equal()
 
